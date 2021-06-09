@@ -5,13 +5,11 @@ import {TCModel, TCString, GVL} from '@iabtcf/core';
  *  be set before creating any instance of the GVL class.
  */
 GVL.baseUrl = "http://localhost:5000";
-
 const tcModel = new TCModel(new GVL());
-tcModel.cmpId = 123;
-tcModel.cmpVersion = 1;
+tcModel.cmpId = 123; // Todo change here
+tcModel.cmpVersion = 1; // and here if necessary
 
 function dispatchConsent(tcModel) {
-    // Todo : voir quoi faire avec la Consent String
     console.info('consent received from Axeptio', TCString.encode(tcModel));
 }
 
