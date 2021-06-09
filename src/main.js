@@ -16,7 +16,6 @@ function dispatchConsent(tcModel) {
 window._axcb = window._axcb || [];
 window._axcb.push(function onAxeptioSDKReady(sdk) {
     sdk.on('cookies:complete', choices => {
-        const allowedVendorIds = [];
         Object.keys(choices).forEach(vendorName => {
             const matches = vendorName.match(/iab_([0-9]+)/);
             if (matches && choices[vendorName]) {
